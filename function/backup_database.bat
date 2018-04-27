@@ -1,8 +1,8 @@
 
 For /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set mydate=%%c-%%a-%%b)
 
-set backupdir=c:\xampp\htdocs\
-set db=service_request
+set backupdir=c:\xampp\htdocs\DSS_DB_BU\
+set db=digital_signature
 
 echo %backupdir%
 

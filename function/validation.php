@@ -96,7 +96,7 @@ if(isset($_POST['upload_file'])){
         $update_file->execute();
         */
 
-    }elseif ($file_name_ext == "pdf" or $file_name_ext == "doc" or $file_name_ext == "docx") {
+    }elseif ($file_name_ext == "pdf" or $file_name_ext == "doc" or $file_name_ext == "docx" or $file_name_ext == "ppt" or $file_name_ext == "pptx") {
         // code...
 
         $ds_info        = explode('-',$ds_no);

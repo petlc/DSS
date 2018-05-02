@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    $('.deptname').hide();
 
     $('#auto_resize').change(function(){
         if(this.checked)

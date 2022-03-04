@@ -24,7 +24,7 @@
                         <input type="hidden" name="emp_lname" id="emp_lname" value="<?php echo $lastname; ?>">
                         <input type="hidden" name="emp_id" id="emp_id" value="<?php echo $id; ?>">
                         <input type="hidden" name="emp_dept" id="emp_dept" value="<?php echo $department; ?>">
-                        <input type="hidden" name="crtd_date" id="crtd_date" value="<?php echo date("Y/m/d H:m"); ?>">
+                        <input type="hidden" name="crtd_date" id="crtd_date" value="<?php echo date("Y-m-d H:i:s"); ?>">
                         <input type="hidden" name="ip_address" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>">
                         <input type="file"  class="col-12 btn btn-secondary regi" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.openxmlformats-officedocument.wordprocessingml.document, .pdf" required>
 
@@ -160,10 +160,18 @@
                     <div class="alert alert-danger" role="alert">
                         <strong>Result</strong><br> Your uploaded file is not valid, please validate again your registered file with attachement of your generated stamp.
                         <?php
-                            if($size_movement == "inc"){
-                                echo "Make sure that the you only add the stamp or else register again new one with your add text";
-                            }elseif ($size_movement == "dec") {
-                                echo "Make sure that the you add the stamp and did not remove some text or else register again";
+
+                            if (!empty($size_movement)) {
+                                # code...
+                                
+                                if($size_movement == "inc"){
+                                    echo "Make sure that the you only add the stamp or else register again new one with your add text";
+                                }elseif ($size_movement == "dec") {
+                                    echo "Make sure that the you add the stamp and did not remove some text or else register again";
+                                }
+
+                            }else{
+                                echo "Please paste the stamp inorder to see the difference of the data with stamp and without stamp.";
                             }
                         ?>
                         <button type="submit" class="btn btn-danger" onclick="window.location.href=window.location.href">OK</button>

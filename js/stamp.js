@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    $('.deptname').hide();
 
 
     $('#auto_resize').change(function(){
@@ -119,7 +118,7 @@ $(document).ready(function(){
     });
     $("#dept_font_s").change(function(){
         dept_font_s    = $("#dept_font_s").val();
-        alert(dept_font_s);
+        //alert(dept_font_s);
         $("#dept_font_size").val(dept_font_s) ;
         myStamp();
     });
@@ -179,8 +178,9 @@ $(document).ready(function(){
                 name_y: name_font_y,
                 auto_resize: auto_resize},
             success: function(data){
+                  //alert(data);
                 var img = jQuery.parseJSON(data);
-                //alert(img);
+              
                 $(".pCircle").html(img[6]);
                 //$(".pInput").html(img[7]);
                 $(".circleWH_demo").html(circleWH);

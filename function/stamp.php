@@ -67,8 +67,11 @@ function createImage($width, $height, $fname, $lname, $dept, $date, $ds, $dept_s
 
     $dept = explode(" ",$dept);
     $date = explode(" ",$date);
-    $regular_font_style = "../fonts/arial.ttf";
-    $bold_font_style    = "../fonts/arialbd.ttf";
+ //   $regular_font_style = "../fonts/arial.ttf";
+//    $bold_font_style    = "../fonts/arialbd.ttf";
+  
+    $regular_font_style = dirname(__FILE__) . "/fonts/arial.ttf";
+    $bold_font_style    = dirname(__FILE__) . "/fonts/arialbd.ttf";
 
     $im = @imagecreate(120, 130) or die("Cannot Initialize new GD image stream");
     $red = imagecolorallocate($im, 255,   0,   0);
@@ -100,7 +103,7 @@ function createImage($width, $height, $fname, $lname, $dept, $date, $ds, $dept_s
     }else{
 
         imagettftext($im, $dept_s, 0, $dept_x, $dept_y, $red, $bold_font_style, "PET ".$dept[0]);
-
+        
     }
 
 
@@ -117,8 +120,9 @@ function createImage($width, $height, $fname, $lname, $dept, $date, $ds, $dept_s
     // date
     $font_date_size = ($width / 9) ;
     $font_date_x    = 60-($width / 2.75);
+      
     imagettftext($im, $font_date_size, 0, $font_date_x, 64, $red, $bold_font_style, $date[0]);
-
+   
     //echo "<br> ".$font_date_size." ".$font_date_x;
 
     // line 1

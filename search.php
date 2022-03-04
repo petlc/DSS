@@ -51,6 +51,7 @@ require_once 'restriction.php';
             
             
             <div class="row pt-5">
+                <div class="col-3"></div>
                 <div class="col-6">
                     <div class="card">
                         <div class="card-header">

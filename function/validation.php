@@ -143,7 +143,7 @@ if(isset($_POST['upload_file'])){
 
             }elseif($file_size > $stamped_file_size){
 
-                $validation         = "Invalid";
+                $validation         = "Valid";
                 $upload_file_path   = "";
                 $size_movement      = "inc";
             }else{
@@ -151,6 +151,7 @@ if(isset($_POST['upload_file'])){
 
                 $validation = "Invalid";
                 $upload_file_path = "";
+                $size_movement = "";
             }
 
         }

@@ -9,7 +9,8 @@ $host       = 'localhost';
 $username   = 'root';
 $password   = '';
 $dbName     = 'digital_signature';
-$dbEmp      = 'service_request';
+$dbEmp      = 'pet_employees';
+//$dbEmp      = 'service_request';
 //$dbCon = new PDO("mysql:host=".$host.";dbname=".$dbName, $username, $password);
 try{
  $dbCon = new PDO("mysql:host=".$host.";dbname=".$dbName, $username, $password);
@@ -49,7 +50,8 @@ class login{
                 //
                 }
 
-                $employee_query = $dbEmpCon->prepare("Select * from employees where pet_id=:pet_id");
+                $employee_query =       $dbEmpCon->prepare("Select * from emp_info where pet_id=:pet_id");
+          //      $employee_query =       $dbEmpCon->prepare("Select * from employees where pet_id=:pet_id");
                 $employee_query->bindparam(':pet_id', $username);
                 $employee_query->execute();
 

@@ -8,7 +8,7 @@ if(isset($_POST['login'])){
         //$lastvisited  = filter_input(INPUT_POST, "lastvisited");
         $accounts = new login();
         //echo $username;
-		echo $accounts->loginAccount($username, $password, $lastvisited);
+		echo $accounts->loginAccount($username, $password);
 	}else{
 		echo"<script>alert('Invalid username or password')</script>";
 	}

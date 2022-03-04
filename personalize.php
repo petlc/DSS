@@ -173,7 +173,7 @@ if($check_settings->rowCount() > 0){
                                             </div>
                                             <div class="row">
                                                 <label class="col-4 col-form-label text-right"><b>Auto Adjustment:</b></label>
-                                                <input type="checkbox" class="col-4 col-form-label" name="auto_resize" id="auto_resize" value="auto_resize">
+                                                <input type="checkbox" class="col-4 col-form-label" name="auto_resize" id="auto_resize" value="auto_resize" checked>
                                             </div>
                                         </div>
 

@@ -23,6 +23,7 @@ if(empty($_SESSION['url'])){
         <link rel="stylesheet" type="text/css"href="css/font-awesome.css"/>
         <link rel="stylesheet" type="text/css"href="css/basic-needs.css"/>
         <link rel="stylesheet" type="text/css"href="css/jquery.simple-dtpicker.css"/>
+        <link rel="stylesheet" type="text/css"href="css/login.css"/>
         <script src="js/jquery-3.1.1.min.js"></script>
         <script src="js/tether.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -38,9 +39,7 @@ if(empty($_SESSION['url'])){
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-brand" >
-                    <img src="image/pet1.png">
-                    Digital Signature System
+                <div class="navbar-brand py-4">
                 </div>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
@@ -48,10 +47,16 @@ if(empty($_SESSION['url'])){
                     
                 </div>     
             </nav>
-            <div class="row pt-5">
+            <div class="row  login">
                 <div class="col-3"></div>
                 <div class="col-6">
                     <div class="card">
+                        <div class="card-header">
+                            <div class="navbar-brand system" >
+                                <img src="image/pet1.png">
+                                Digital Signature System
+                            </div>
+                        </div>
                         <div class="card-block">
                             <form method="post">
                                 <!--
@@ -68,7 +73,7 @@ if(empty($_SESSION['url'])){
 
                                 <div class="row pt-3 pb-5">
                                     <div class="col-4"></div>
-                                    <button type="submit" class="btn btn-danger col-4" name="login">Login</button>
+                                    <button type="submit" class="btn btn-success col-4" name="login">Login</button>
 
                                 </div>
                             </form>
